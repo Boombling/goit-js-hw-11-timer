@@ -1,0 +1,41 @@
+body {
+  background-image: url(./image/bcg.jpg);
+}
+.timer {
+  display: flex;
+  justify-content: center;
+}
+.field {
+  margin-top: 15%;
+  padding: 50px;
+  background-color: rgba(98, 98, 98, 38%);
+  margin-right: 35px;
+  border-radius: 30px;
+
+  font-size: 20px;
+}
+.field:last-child {
+  margin-right: 0;
+}
+.value {
+  color: aliceblue;
+  background-color: rgba(40, 40, 40, 66%);
+  border-radius: 25%;
+  display: flex;
+  justify-content: center;
+  /* padding-top: 30px; */
+  padding: 20px;
+  font-family: 'Indie Flower', cursive;
+}
+
+.label {
+  display: flex;
+  justify-content: center;
+  /* background-color: #646169; */
+  /* border-radius: 15%; */
+  padding-top: 30px;
+  font-family: 'Dancing Script', cursive;
+}
+.days {
+  font-size: 50px;
+}

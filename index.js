@@ -1,3 +1,10 @@
+const ref = {
+    dayTime: document.querySelector('.value[data-value="days"]'),
+    hoursTime: document.querySelector('.value[data-value="hours"]'),
+    minsTime: document.querySelector('.value[data-value="mins"]'),
+    secsTime: document.querySelector('.value[data-value="secs"]'),
+}
+
 class CountdownTimer {
   constructor({ onTick, selector, targetDate }) {
     this.onTick = onTick;
@@ -32,17 +39,11 @@ class CountdownTimer {
   }
 }
   
-function updateClockface({ days, hours, mins, secs }, selector) {
-  const selectorTime = document.querySelector(`${selector}`);
-  const dayTime = selectorTime.querySelector('[data-value="days"]');
-  const hoursTime = selectorTime.querySelector('[data-value="hours"]');
-  const minsTime = selectorTime.querySelector('[data-value="mins"]');
-  const secsTime = selectorTime.querySelector('[data-value="secs"]');
-
-  dayTime.textContent = `${days}`;
-  hoursTime.textContent = `${hours}`;
-  minsTime.textContent = `${mins}`;
-  secsTime.textContent = `${secs}`;
+function updateClockface({ days, hours, mins, secs }, ) {
+  ref.dayTime.textContent = `${days}`;
+  ref.hoursTime.textContent = `${hours}`;
+  ref.minsTime.textContent = `${mins}`;
+  ref.secsTime.textContent = `${secs}`;
 }
 const timer = new CountdownTimer({
   onTick: updateClockface,
